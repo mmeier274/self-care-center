@@ -1,7 +1,60 @@
-font-family: 'Quicksand', sans-serif;
+/* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
+/* black - #000000; */
+
+*{
+  font-family:'Quicksand', sans-serif;
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(140deg, orange 40%, blue 60%);
+}
+
+h1{
+  border: solid;
+  border-color: black;
+  border-radius: 50%/25%;
+}
+
+#control {
+  border: 4px solid black;
+  background-color: #f7e4bf;
+  color: white;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  width: 200px;
+  font-size: 20px;
+  margin-top: 10px;
+  border-radius: 50%/120%
+}
+
+button:hover {
+  border: 4px solid #7c1714;
+  cursor: pointer;
+}
+
+.button-container1 {
+  background-color: #134d71;
+}
+
+.button-container2 {
+  background-color: #78a7c6;
+}
+
+.icon-box {
+  background-color: #000000;
+
+}
+
+.title-container{
+  background-color: red;
+  border-radius: 50%/25%;
+}
