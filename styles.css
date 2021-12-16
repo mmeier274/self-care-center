@@ -56,11 +56,14 @@ button:hover {
 }
 
 .icon-box {
-  background-color: #000000;
+  background-color: silver;
   height: 160px;
   position: relative;
   top: 300px;
+}
 
+.img-meditate {
+  width: 10%;
 }
 
 .title-container{
@@ -98,6 +101,7 @@ button:hover {
 }
 
 .smaller-image {
+  background: #ffffff;
   width: 100px;
   margin: auto;
   position: relative;
