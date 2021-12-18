@@ -1,3 +1,4 @@
+//affirmations array
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -13,6 +14,7 @@ var affirmations = [
   "I honor my body by trusting the signals that it sends me.",
   "I manifest perfect health by making smart choices.",
 ];
+//mantras array
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
   "Don’t let yesterday take up too much of today.",
@@ -30,25 +32,35 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather.",
 ];
+
+// variable querySelector for the receive btn
+var btnRec = document.querySelector('.receive-button');
+// variable querySelector for the message itself
+var affMessage = document.querySelector('.aff-mir');
+// understand which array to displayRandomAff
+// if(document.getElementById('affirm').checked){
+// }else if(document.getElementById('mant').checked)
+// recieve btn addEventListener
+btnRec.addEventListener('click', displayRandomAff);
+// displayRandomAff function
+function displayRandomAff(){
+    event.preventDefault()
+    if(document.getElementById('affirm').checked){
+      affMessage.innerText = affirmations[getRandomIndex(affirmations)]
+    }else if(document.getElementById('mant').checked){
+      affMessage.innerText = mantras[getRandomIndex(mantras)]
+};
+
+// function displayRandomMan(){
+//   event.preventDefault()
+//   affMessage.innerText = mantras[getRandomIndex(mantras)]
+};
+// generates random selection from the arrays
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 };
 
-var btnRec = document.querySelector('.receive-button');
-var affMessage = document.querySelector('.aff-mir');
-
-btnRec.addEventListener('click', displayRandomAff);
-
-function displayRandomAff(){
-    event.preventDefault()
-    affMessage.innerText = affirmations[getRandomIndex(affirmations)]
-    console.log("hello")
-};
-
-// function displayRandomMan(){
-//     randoQuote = getRandomIndex(mantras)
-//     viewBoxbox.innerText = quotes[randoQuote]
-// };
-// function getRandomIndex(array) {
-//     return Math.floor(Math.random() * array.length);
-// };
+//1. choose which type of Message
+//2. click the button to display Message
+//3. switch the image with the Message
+//4. refresh and repa
