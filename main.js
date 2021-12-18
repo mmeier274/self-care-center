@@ -35,31 +35,24 @@ var mantras = [
 
 // variable querySelector for the receive btn
 var btnRec = document.querySelector('.receive-button');
+var btnAff = document.querySelector('#affirm');
 // variable querySelector for the message itself
 var affMessage = document.querySelector('.aff-mir');
-// understand which array to displayRandomAff
-// if(document.getElementById('affirm').checked){
-// }else if(document.getElementById('mant').checked)
-// recieve btn addEventListener
 btnRec.addEventListener('click', displayRandomAff);
 // displayRandomAff function
 function displayRandomAff(){
     event.preventDefault()
     if(document.getElementById('affirm').checked){
-      affMessage.innerText = affirmations[getRandomIndex(affirmations)]
+      affMessage.innerText = affirmations[getRandomIndex(affirmations)];
     }else if(document.getElementById('mant').checked){
       affMessage.innerText = mantras[getRandomIndex(mantras)]
 };
 
-// function displayRandomMan(){
-//   event.preventDefault()
-//   affMessage.innerText = mantras[getRandomIndex(mantras)]
 };
 // generates random selection from the arrays
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 };
-
 //1. choose which type of Message
 //2. click the button to display Message
 //3. switch the image with the Message
