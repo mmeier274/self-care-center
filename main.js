@@ -44,8 +44,10 @@ function displayRandomAff(){
     event.preventDefault()
     if(document.getElementById('affirm').checked){
       affMessage.innerText = affirmations[getRandomIndex(affirmations)];
+      affMessage.classList.add('red');
     }else if(document.getElementById('mant').checked){
       affMessage.innerText = mantras[getRandomIndex(mantras)]
+      affMessage.classList.add('blue');
 };
 
 };
